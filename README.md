@@ -1,4 +1,4 @@
-### Django runserver -u propagation repro
+### https://github.com/django/django/pull/19802 example project
 This repo shows a concrete bug in Django’s autoreloader:
 
 when you run `python -u manage.py runserver`, the autoreloader’s child process starts without the unbuffered intent. In practice, the child runs with `PYTHONUNBUFFERED=None`, so stdout is buffered again.
